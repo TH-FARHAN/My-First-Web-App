@@ -4,9 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Login - AdoptLove</title>
-
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
-
   <style>
     :root {
       --primary: #29b6f6;
@@ -16,13 +14,11 @@
       --border: #b3e5fc;
       --text: #0277bd;
     }
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Poppins', sans-serif;
       background: var(--light-bg);
@@ -31,7 +27,6 @@
       align-items: center;
       height: 100vh;
     }
-
     .login-container {
       background-image: url('./images/login1.jpg');
       background-size: cover;
@@ -47,7 +42,6 @@
       z-index: 1;
       color: var(--text);
     }
-
     .login-container::before {
       content: "";
       position: absolute;
@@ -56,7 +50,6 @@
       border-radius: 12px;
       z-index: -1;
     }
-
     .login-container h3 {
       text-align: center;
       color: var(--text);
@@ -64,18 +57,15 @@
       font-weight: 600;
       font-size: 1.8rem;
     }
-
     .form-group {
       margin-bottom: 20px;
     }
-
     label {
       display: block;
       font-weight: 500;
       color: var(--text);
       margin-bottom: 6px;
     }
-
     input.form-control {
       width: 100%;
       padding: 10px 14px;
@@ -86,7 +76,6 @@
       background-color: var(--light-bg);
       transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
     }
-
     input.form-control:focus,
     input.form-control:hover {
       border-color: var(--primary);
@@ -94,12 +83,10 @@
       background-color: #ffffff;
       box-shadow: 0 6px 15px rgba(41, 182, 246, 0.3);
     }
-
     input::placeholder {
       color: var(--primary-dark);
       opacity: 0.6;
     }
-
     button.btn-primary {
       width: 100%;
       padding: 12px 0;
@@ -112,14 +99,12 @@
       cursor: pointer;
       transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
     }
-
     button.btn-primary:hover,
     button.btn-primary:focus {
       background-color: var(--primary-dark);
       box-shadow: 0 8px 25px rgba(2, 119, 189, 0.5);
       outline: none;
     }
-
     .btn-success {
       margin-top: 18px;
       display: block;
@@ -135,7 +120,6 @@
       cursor: pointer;
       user-select: none;
     }
-
     .btn-success:hover,
     .btn-success:focus {
       background-color: var(--primary);
@@ -144,7 +128,6 @@
       text-decoration: none;
       outline: none;
     }
-
     @media (max-width: 480px) {
       .login-container {
         padding: 30px 25px;
@@ -156,7 +139,6 @@
   </style>
 </head>
 <body>
-
   <div class="login-container" role="main" aria-label="Administrator login form">
     <h3>Administrator Login</h3>
     <form action="./login_process.php" method="POST" novalidate>
@@ -188,9 +170,7 @@
       </div>
       <button type="submit" class="btn-primary" aria-label="Login">Login</button>
     </form>
-
     <a href="index.php" class="btn-success" aria-label="Back to Home">Back to Home</a>
   </div>
-
 </body>
 </html>

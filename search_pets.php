@@ -1,18 +1,14 @@
 <?php
 $conn = new mysqli("localhost", "root", "", "adoptlove");
-
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
 // Get and sanitize search input
 $search = isset($_GET['search']) ? trim($conn->real_escape_string($_GET['search'])) : '';
-
 if ($search === '') {
     // Prevent showing anything if search is empty
     exit;
 }
-
 // Search for matching pets by title or category
 $sql = "SELECT p.p_id, p.p_tittle, p.p_description, p.p_imagename, c.cat_name
         FROM pets p
@@ -22,7 +18,6 @@ $sql = "SELECT p.p_id, p.p_tittle, p.p_description, p.p_imagename, c.cat_name
         ORDER BY p.p_tittle";
 
 $result = $conn->query($sql);
-
 // Handle results
 if ($result && $result->num_rows > 0): ?>
   <div class="container">

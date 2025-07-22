@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <!-- Basic -->
   <meta charset="utf-8" />
@@ -13,7 +12,6 @@
   <meta name="author" content="" />
 
   <title>About | AdoptLove</title>
-
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -67,7 +65,6 @@
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
-
 /* internet */
 .connection-popup {
   position: fixed;
@@ -90,11 +87,8 @@
 }
 
 </style>
-
 </head>
-
 <body class="sub_page">
-
   <div class="hero_area">
     <!-- header section strats -->
     <?php include 'navbar.php'; ?>
@@ -107,7 +101,7 @@
   body {
     background-color: #e3f2fd; /* Light blue background */
   }
-</style>
+  </style>
 
  <section class="about_section layout_padding">
   <div class="container">
@@ -152,7 +146,6 @@
   </div>
 </section>
 
-
 <!-- Added Section: Testimonials Carousel -->
 <style>
   .testimonial_section {
@@ -175,9 +168,7 @@
     transition: transform 0.3s ease;
     height: 100%;
   }
-
  
-
   .testimonial-card p {
     color: #37474f;
     font-style: italic;
@@ -195,53 +186,45 @@
   <div class="container" style="background-color: #e3f2fd; border-radius: 15px; padding: 40px; box-shadow: 0 8px 20px rgba(0,0,0,0.08);">
     <h2 style="color: #1565c0; font-weight: 700; text-align: center; margin-bottom: 40px;">What Our Adopters Say</h2>
     <div class="owl-carousel owl-theme">
-      
       <div class="item">
         <div class="testimonial-card">
           <p>"AdoptLove helped me find my soulmate in a fur coat. The process was smooth, and support was incredible!"</p>
           <strong>- Anas, Kochi</strong>
         </div>
       </div>
-
       <div class="item">
         <div class="testimonial-card">
           <p>"I was nervous about adopting, but AdoptLove made me feel confident and supported every step of the way."</p>
           <strong>- Farhan, Malappuram</strong>
         </div>
       </div>
-
       <div class="item">
         <div class="testimonial-card">
           <p>"Our rescue pup brought light into our home. Thank you, AdoptLove, for making this possible."</p>
           <strong>- Adhnan, Nilambur</strong>
         </div>
       </div>
-
       <div class="item">
         <div class="testimonial-card">
           <p>"From the first message to bringing home my new buddy, AdoptLove’s team was kind and professional."</p>
           <strong>- Danish, Kozhikode</strong>
         </div>
       </div>
-
       <div class="item">
         <div class="testimonial-card">
           <p>"I never thought I’d love a cat this much. AdoptLove matched me perfectly with my little shadow, Coco."</p>
           <strong>- Sahil, Panthalingal</strong>
         </div>
       </div>
-
       <div class="item">
         <div class="testimonial-card">
           <p>"Volunteering with AdoptLove gave me meaning. I’ve met amazing people and even adopted my foster pup!"</p>
           <strong>- Ameerudheen, Naduvakkad</strong>
         </div>
       </div>
-
     </div>
   </div>
 </section>
-
 
 <!-- jQuery (Required) -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -268,95 +251,80 @@
   });
 </script>
 
-
-
-
-
-
-
   <!-- end about section -->
 
   <!-- info section -->
   <section class="info_section ">
-
     <div class="container">
   <!-- Top Contact Info -->
-  <div class="contact_nav">
-    <a href="tel:+918848272821">
+    <div class="contact_nav">
+      <a href="tel:+918848272821">
       <i class="fa fa-phone" aria-hidden="true"></i>
       <span>Call : +91 8848272821</span>
-    </a>
-    <a href="mailto:farhanmpd2005@gmail.com?subject=AdoptLove%20Support&body=Hello%20team%2C%0AI%20need%20help%20with...">
+      </a>
+      <a href="mailto:farhanmpd2005@gmail.com?subject=AdoptLove%20Support&body=Hello%20team%2C%0AI%20need%20help%20with...">
       <i class="fa fa-envelope" aria-hidden="true"></i>
       <span>Email : farhanmpd2005@gmail.com</span>
-    </a>
+      </a>
     </div>
 
   <!-- Info Sections -->
   <div class="info_top">
     <div class="row info_main_row">
-
       <!-- Quick Links -->
       <div class="col-sm-6 col-md-4 col-lg-3">
-  <div class="info_links">
-    <h4 class="mb-3">QUICK LINKS</h4>
-    <ul class="list-unstyled quick-links">
-      <li>
-        <a href="index.php">
-          <i class="fa fa-home mr-2" aria-hidden="true"></i> Home
-        </a>
-      </li>
-      <li>
-        <a href="service.php">
-          <i class="fa fa-paw mr-2" aria-hidden="true"></i> Pets
-        </a>
-      </li>
-    
-      <li>
-        <a href="help.php">
-          <i class="fa fa-life-ring mr-2" aria-hidden="true"></i> Help & Support
-        </a>
-      </li>
-      <li>
-        <a href="login.php">
-          <i class="fa fa-sign-in mr-2" aria-hidden="true"></i> Login
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>
-
-
+        <div class="info_links">
+          <h4 class="mb-3">QUICK LINKS</h4>
+          <ul class="list-unstyled quick-links">
+            <li>
+              <a href="index.php">
+                <i class="fa fa-home mr-2" aria-hidden="true"></i> Home
+              </a>
+            </li>
+            <li>
+              <a href="service.php">
+                <i class="fa fa-paw mr-2" aria-hidden="true"></i> Pets
+              </a>
+            </li>
+            <li>
+              <a href="help.php">
+                <i class="fa fa-life-ring mr-2" aria-hidden="true"></i> Help & Support
+              </a>
+            </li>
+            <li>
+              <a href="login.php">
+                <i class="fa fa-sign-in mr-2" aria-hidden="true"></i> Login
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
       <!-- Instagram Feeds -->
       <div class="col-sm-6 col-md-4 col-lg-3 mx-auto">
        <!-- Home Services Section -->
-<div class="home_services">
-  <h5>Our Home Services</h5>
-  <ul class="services_list">
-    <li>Pet Adoption Guidance</li>
-    <li>Home Pet Health Checkups</li>
-    <li>Pet Training & Behavior Advice</li>
-    <li>Nutrition and Feeding Consultations</li>
-    <li>Post-Adoption Support</li>
-  </ul>
- <p class="contact_info">
-  Need more info? Call us at <a href="tel:+918848272821">+91 8848272821</a> or 
-<a href="mailto:farhanmpd2005@gmail.com?subject=AdoptLove%20Support&body=Hello%20team%2C%0AI%20need%20help%20with...">email us</a>
-</p>
-
-</div>
-
+      <div class="home_services">
+        <h5>Our Home Services</h5>
+        <ul class="services_list">
+          <li>Pet Adoption Guidance</li>
+          <li>Home Pet Health Checkups</li>
+          <li>Pet Training & Behavior Advice</li>
+          <li>Nutrition and Feeding Consultations</li>
+          <li>Post-Adoption Support</li>
+        </ul>
+        <p class="contact_info">
+          Need more info? Call us at <a href="tel:+918848272821">+91 8848272821</a> or 
+          <a href="mailto:farhanmpd2005@gmail.com?subject=AdoptLove%20Support&body=Hello%20team%2C%0AI%20need%20help%20with...">email us</a>
+        </p>
       </div>
-
+    </div>
       <!-- Adoption Process Guide (Replaces Newsletter) -->
-      <div class="col-md-4">
-        <div class="info_form">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21782.194670313733!2d76.18054203183236!3d11.250344969162642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba63a4aa86c5e45%3A0x125afddff94baea3!2sMampad%2C%20Kerala!5e0!3m2!1sen!2sin!4v1748537121535!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+    <div class="col-md-4">
+      <div class="info_form">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21782.194670313733!2d76.18054203183236!3d11.250344969162642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba63a4aa86c5e45%3A0x125afddff94baea3!2sMampad%2C%20Kerala!5e0!3m2!1sen!2sin!4v1748537121535!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-
     </div>
   </div>
+</div>
 
   <!-- Bottom Row -->
   <div class="info_bottom">
@@ -370,20 +338,17 @@
        <div class="social_box d-flex justify-content-end">
        <a href="https://www.instagram.com/farraannn/" target="_blank" style="color: #E1306C; font-size: 24px; margin-right: 15px;">
          <i class="fa fa-instagram" aria-hidden="true"></i>
-       </a>
-
- 
-        <a href="https://wa.me/918848272821?text=Hi%20there!%20I'm%20interested%20in%20adopting%20a%20pet.%20Could%20you%20please%20guide%20me%20through%20the%20process%3F
+       </a> 
+       <a href="https://wa.me/918848272821?text=Hi%20there!%20I'm%20interested%20in%20adopting%20a%20pet.%20Could%20you%20please%20guide%20me%20through%20the%20process%3F
                 " target="_blank" style="color: #25D366; font-size: 24px;">
-         <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
        </a>
       </div>
-
       </div>
     </div>
   </div>
 </div>
-  </section>
+</section>
   <!-- end info_section -->
 
   <!-- footer section -->
@@ -413,8 +378,6 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
   </script>
   <!-- End Google Map -->
-
-
   <div id="connectionStatus" class="connection-popup"></div>
 <script>
   function showConnectionStatus(message, isOnline) {
@@ -441,8 +404,5 @@
     showConnectionStatus('⚠️ You are offline', false);
   }
 </script>
-
-
 </body>
-
 </html>

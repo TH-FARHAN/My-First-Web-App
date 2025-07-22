@@ -28,15 +28,12 @@ if ($conn->connect_error) {
       padding: 0;
       min-height: 100vh;
     }
-
     .container-fluid {
       padding-top: 30px;
     }
-
     .row.content {
       min-height: 80vh;
     }
-
     .dashboard-header {
       display: flex;
       justify-content: space-between;
@@ -45,7 +42,6 @@ if ($conn->connect_error) {
       flex-wrap: wrap;
       gap: 15px;
     }
-
     .dashboard-header h2 {
       color: #007bbd;
       font-weight: 700;
@@ -53,7 +49,6 @@ if ($conn->connect_error) {
       letter-spacing: 1.5px;
       margin: 0;
     }
-
     .dashboard-card {
       background: #ffffff;
       padding: 30px;
@@ -61,7 +56,6 @@ if ($conn->connect_error) {
       box-shadow: 0 10px 30px rgba(0, 123, 189, 0.12);
       margin-bottom: 30px;
     }
-
  .dashboard-card-header {
   display: flex;
   justify-content: space-between;
@@ -70,7 +64,6 @@ if ($conn->connect_error) {
   margin-bottom: 25px;
   gap: 10px;
 }
-
 .dashboard-card-header h4 {
   font-size: 1.8rem;
   color: #007bbd;
@@ -80,27 +73,22 @@ if ($conn->connect_error) {
   border-bottom: 2px solid #007bbd;
   white-space: nowrap;
 }
-
 .action-buttons {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-
 @media (max-width: 576px) {
   .dashboard-card-header {
     flex-direction: column;
     align-items: flex-start;
   }
-
   .action-buttons {
     width: 100%;
     justify-content: flex-start;
     flex-wrap: wrap;
   }
 }
-
-
     .btn-primary {
       background-color: #007bbd;
       border: none;
@@ -111,13 +99,11 @@ if ($conn->connect_error) {
       box-shadow: 0 6px 15px rgba(0, 123, 189, 0.3);
       transition: background-color 0.3s ease;
     }
-
     .btn-primary:hover,
     .btn-primary:focus {
       background-color: #004080;
       box-shadow: 0 8px 25px rgba(0, 64, 128, 0.5);
     }
-
     .btn-icon {
       background-color: #ffffff;
       border: 1px solid #d0e7f9;
@@ -130,22 +116,18 @@ if ($conn->connect_error) {
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
       transition: background-color 0.3s ease;
     }
-
     .btn-icon:hover {
       background-color: #e6f2ff;
     }
-
     .dropdown-menu {
       border-radius: 12px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     }
-
     .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
       gap: 20px;
     }
-
    .adoption-card {
   background: #ffffff;
   border-radius: 15px;
@@ -153,26 +135,19 @@ if ($conn->connect_error) {
   box-shadow: 0 6px 15px rgba(0, 123, 189, 0.1);
   transition: all 0.3s ease;
 }
-
 .adoption-card:hover {
   background-color: #eaf6ff; /* soft light blue background */
   box-shadow: 0 12px 30px rgba(0, 123, 189, 0.25); /* deeper blue shadow */
 }
-    
-
-  
-
     .adoption-card h5 {
       color: #007bbd;
       font-weight: 700;
       margin-bottom: 10px;
     }
-
     .adoption-card p {
       margin: 4px 0;
       font-size: 0.95rem;
     }
-
     .scroll-top-btn {
       position: fixed;
       bottom: 30px;
@@ -190,28 +165,23 @@ if ($conn->connect_error) {
       transition: all 0.3s ease-in-out;
       z-index: 999;
     }
-
     .scroll-top-btn:hover {
       background-color: #0288d1;
       transform: translateY(-3px);
     }
-
     @media (max-width: 768px) {
       .dashboard-header {
         flex-direction: column;
         align-items: flex-start;
       }
-
       .dashboard-card-header {
         flex-direction: column;
         align-items: flex-start;
       }
-
       .dashboard-header h2,
       .dashboard-card-header h4 {
         font-size: 2rem;
       }
-
       .btn-primary {
         width: 100%;
       }
@@ -220,7 +190,6 @@ if ($conn->connect_error) {
 </head>
 <body>
 <?php include 'headermobile.php'; ?>
-
 <div class="container-fluid">
   <div class="row content">
     <?php include 'header.php'; ?>
@@ -228,31 +197,29 @@ if ($conn->connect_error) {
       <div class="dashboard-header">
         <h2>Adoption Requests</h2>
       </div>
-
       <div class="dashboard-card">
-    <div class="dashboard-card-header d-flex justify-content-between align-items-center flex-wrap">
-  <h4 class="mb-0">All Requests</h4>
-  <div class="action-buttons d-flex align-items-center gap-2">
-    <a href="download.php?sort=<?= urlencode($_GET['sort'] ?? 'first') ?>" class="btn btn-primary d-flex align-items-center">
-  <i class="fas fa-download mr-2"></i> Download
-</a>
-    <div class="dropdown">
-      <button class="btn btn-icon d-flex align-items-center justify-content-center" type="button" id="sortMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <i class="fas fa-ellipsis-v"></i>
-      </button>
-      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="sortMenu">
-        <h6 class="dropdown-header text-primary">Sort by</h6>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="?sort=name">🔤 Sort by Name</a>
-        <br>
-        <a class="dropdown-item" href="?sort=recent">🕒 Recently Requested</a>
-        <br>
-        <a class="dropdown-item" href="?sort=first">📄 First Requested</a>
-      </div>
-    </div>
-  </div>
-</div>
-
+        <div class="dashboard-card-header d-flex justify-content-between align-items-center flex-wrap">
+          <h4 class="mb-0">All Requests</h4>
+          <div class="action-buttons d-flex align-items-center gap-2">
+            <a href="download.php?sort=<?= urlencode($_GET['sort'] ?? 'first') ?>" class="btn btn-primary d-flex align-items-center">
+              <i class="fas fa-download mr-2"></i> Download
+            </a>
+            <div class="dropdown">
+              <button class="btn btn-icon d-flex align-items-center justify-content-center" type="button" id="sortMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-ellipsis-v"></i>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="sortMenu">
+                <h6 class="dropdown-header text-primary">Sort by</h6>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="?sort=name">🔤 Sort by Name</a>
+                <br>
+                <a class="dropdown-item" href="?sort=recent">🕒 Recently Requested</a>
+                <br>
+                <a class="dropdown-item" href="?sort=first">📄 First Requested</a>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="card-grid">
           <?php
           $sort = $_GET['sort'] ?? 'first';
@@ -262,11 +229,9 @@ if ($conn->connect_error) {
             case 'first':
             default: $orderBy = "a_id ASC"; break;
           }
-
           $sql = "SELECT a_id, a_name, a_address, a_pn, a_email, a_petName, a_comment FROM adoption ORDER BY $orderBy";
           $result = $conn->query($sql);
           $serial = 1;
-
           if ($result && $result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
               echo '<div class="adoption-card">';
@@ -288,23 +253,19 @@ if ($conn->connect_error) {
     </div>
   </div>
 </div>
-
 <!-- Scroll to Top Button -->
 <button onclick="scrollToTop()" id="scrollBtn" class="scroll-top-btn" title="Back to Top">
   <i class="fas fa-arrow-up"></i>
 </button>
-
 <script>
   window.onscroll = function () {
     const scrollBtn = document.getElementById("scrollBtn");
     scrollBtn.style.display = (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200)
       ? "block" : "none";
   };
-
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 </script>
-
 </body>
 </html>

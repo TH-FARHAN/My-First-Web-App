@@ -4,7 +4,6 @@
     background-color: #e3f2fd !important; /* force light blue */
   }
 </style>
-
 <header class="header_section">
   <div class="header_bottom">
     <div class="container-fluid">
@@ -16,7 +15,6 @@
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class=""> </span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav  ">
             <li class="nav-item">
@@ -28,7 +26,6 @@
             <li class="nav-item">
               <a class="nav-link" href="service.php">Pets</a>
             </li>
-           
             <li class="nav-item">
               <a class="nav-link" href="help.php">Help & Support</a>
             </li>
@@ -41,7 +38,6 @@
     </div>
   </div>
 </header>
-
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
   $(document).ready(function () {
@@ -49,9 +45,7 @@
     if (currentPath === "") {
       currentPath = "index.php";
     }
-
     $('.nav-item').removeClass('active');
-
     $('.nav-item a').each(function () {
       var linkPath = $(this).attr('href');
       if (linkPath === currentPath) {

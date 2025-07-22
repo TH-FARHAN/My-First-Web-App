@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-inverse visible-xs">
   <div class="container-fluid">
     <div class="navbar-header">

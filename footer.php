@@ -12,7 +12,6 @@
     position: relative;
     z-index: 1;
   }
-
   .footer_section::before {
     content: '';
     position: absolute;
@@ -23,53 +22,44 @@
     background-color: rgba(255, 255, 255, 0.85); /* White transparent overlay */
     z-index: 0;
   }
-
   .footer_section .container {
     position: relative;
     z-index: 2;
   }
-
   .footer_section p {
     margin: 0;
     font-size: 13px;
     font-weight: 500;
     line-height: 1.4;
   }
-
   .footer_section a {
     color: #0d47a1;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.2s ease;
   }
-
   .footer_section a:hover {
     color: #1565c0;
     text-decoration: underline;
   }
-
   .footer_tagline {
     font-size: 12px;
     font-style: italic;
     color: #455a64;
     margin-top: 3px;
   }
-
   @media (max-width: 600px) {
     .footer_section {
       padding: 6px 8px;
     }
-
     .footer_section p {
       font-size: 12px;
     }
-
     .footer_tagline {
       font-size: 11px;
     }
   }
 </style>
-
 <footer class="footer_section">
   <div class="container">
     <p>
@@ -79,7 +69,6 @@
     <div class="footer_tagline">Adopt. Love. Care. 🐶🐾</div>
   </div>
 </footer>
-
 <script>
   document.getElementById("displayYear").textContent = new Date().getFullYear();
 </script>
