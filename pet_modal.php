@@ -1,63 +1,94 @@
-	  <style>
-  /* Modal Content with Full Background Image */
+<style>
   #myModal .modal-content {
-    background-image: url('./images/adoption.jpg'); /* Update path if needed */
+    background-image: url('./images/adoption.jpg');
     background-size: cover;
     background-position: center;
     border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    color: #fff;
     overflow: hidden;
-    position: relative;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   }
-  /* Semi-transparent overlay for all sections */
+
   #myModal .modal-section {
-    background-color: rgba(255, 255, 255, 0.85);
+    background: rgba(0, 0, 0, 0.5); /* dark transparent overlay */
     padding: 20px;
-    z-index: 2;
   }
+
   #myModal .modal-header,
   #myModal .modal-footer {
     border: none;
+    color: #fff;
   }
-  #myModal .modal-header {
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
+
+  #myModal .modal-title {
+    color: #fff;
+    font-weight: bold;
   }
-  #myModal .modal-footer {
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
+
+  #myModal .form-group label {
+    color: #fff;
+    font-weight: 500;
   }
-  /* Form field spacing */
-  #myModal .form-group {
-    margin-bottom: 15px;
+
+  #myModal .form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 8px;
   }
-  /* Button styling */
+
+  #myModal .form-control::placeholder {
+    color: #eee;
+  }
+
+  #myModal select.form-control {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff !important;
+    border: 1px solid #fff;
+  }
+
+  #myModal select.form-control option {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff !important; /* ✅ Make sure options are visible */
+  }
+
+  #myModal select.form-control:focus {
+    outline: none;
+    box-shadow: 0 0 5px #fff;
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
+  #myModal select.form-control option:first-child {
+    color: #ccc;
+  }
+
   #myModal .btn-primary {
-    background-color: #007bff;
+    background-color: #ff7f50;
+    color: white;
     border: none;
+    border-radius: 8px;
   }
+
   #myModal .btn-secondary {
     background-color: #6c757d;
+    color: white;
     border: none;
+    border-radius: 8px;
   }
-  /* Responsive modal width */
+
   .modal-dialog.modal-nd {
     max-width: 600px;
   }
 </style>
+
 <div class="modal fade" id="myModal">
   <div class="modal-dialog modal-nd">
     <div class="modal-content">
-      <!-- Modal Header -->
       <div class="modal-header modal-section">
         <h4 class="modal-title">Update Pets</h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
       </div>
-      <form action="./pet_action_page.php" class="was-validated" enctype="multipart/form-data" method="POST">        
-        <!-- Modal Body -->
+      <form action="./pet_action_page.php" class="was-validated" enctype="multipart/form-data" method="POST">
         <div class="modal-body modal-section">
           <div class="form-group">
             <label for="name">Name</label>
@@ -104,7 +135,6 @@
             </select>
           </div>
         </div>
-        <!-- Modal Footer -->
         <div class="modal-footer modal-section">
           <button type="submit" class="btn btn-primary">Submit</button>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

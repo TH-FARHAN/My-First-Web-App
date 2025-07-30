@@ -1,7 +1,7 @@
 <style>
   .header_section,
   .header_bottom {
-    background-color: #e3f2fd !important; /* force light blue */
+    background-color: #e0f7e9 !important; /* force light green */
   }
 </style>
 <header class="header_section">

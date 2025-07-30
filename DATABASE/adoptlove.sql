@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jul 25, 2025 at 02:11 AM
+-- Generation Time: Jul 30, 2025 at 04:48 PM
 -- Server version: 9.1.0
 -- PHP Version: 8.3.14
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `adoptlove`
 --
-CREATE DATABASE IF NOT EXISTS `adoptlove` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
-USE `adoptlove`;
 
 -- --------------------------------------------------------
 
@@ -45,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `adoption` (
   `a_updatedBy` varchar(200) NOT NULL,
   `a_updatedDate` timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
   PRIMARY KEY (`a_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=40 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `adoption`
@@ -74,15 +72,14 @@ INSERT INTO `adoption` (`a_id`, `a_name`, `a_address`, `a_pn`, `a_email`, `pet_i
 (27, 'Mirzan Ahammed', 'Housename (H), place, place(P.O),Kerala', '9834657218', 'mirzanahd@gmail.com', 22, 'Angora Rabbi', 'nothing', 1, '', '2025-06-08 05:27:22.000000', '', '2025-06-08 05:27:22.282789'),
 (28, 'Mirfa', 'housename(H), place, place (P.O),Kerala', '6756288724', 'mirfa@gmail.com', 31, 'Catfish', 'nothing', 1, '', '2025-06-08 06:29:36.000000', '', '2025-06-08 06:29:36.648804'),
 (29, 'Hafi', 'housename (H), place, place (P.O), Kerala', '675462567', 'hafi@gmail.com', 19, 'Holland Lop', 'nothing', 1, '', '2025-06-08 06:32:02.000000', '', '2025-06-08 06:32:02.030106'),
-(30, 'Justin', 'nothing', '4556242345', 'justin@gmail.com', 33, 'Guppies ', 'no', 1, '', '2025-06-09 17:06:54.000000', '', '2025-06-09 17:06:54.227103'),
 (31, 'Muhammed', 'housename(House), place, place (P.O),kerala\r\n676542', '7654678643', 'muhammed@gmail.com', 15, 'Zebra Finch', 'nothing', 1, '', '2025-06-12 17:58:25.000000', '', '2025-06-12 17:58:25.917355'),
-(32, 'vishnu', '', '6374582763', 'vishnu@gmail.com', 15, 'Zebra Finch', '', 1, '', '2025-06-13 13:34:22.000000', '', '2025-06-13 13:34:22.850785'),
 (33, 'sanika', 'housename(H), Place, Place(P.O), Kerala', '79077523997', 'sanika@gmail.com', 28, 'Bearded Dragon ', 'nothing', 1, '', '2025-06-13 14:55:03.000000', '', '2025-06-13 14:55:03.198529'),
 (34, 'Lidiya', 'Housename(H), place, Kerala', '8113977738', 'lidiya@gmail.com', 29, ' Crocodile', 'nothing', 1, '', '2025-06-13 14:59:12.000000', '', '2025-06-13 14:59:12.357232'),
 (35, 'Ameerudheen', 'kerala', '9037826246', 'ameer@gmail.com', 29, ' Crocodile', 'nothing', 1, '', '2025-06-13 15:20:21.000000', '', '2025-06-13 15:20:21.981088'),
 (36, 'mon', 'no', '839389730', 'mon@gmail.com', 14, 'Cockatiel', 'no', 1, '', '2025-07-03 17:26:20.000000', '', '2025-07-03 17:26:20.839460'),
 (37, 'riyas', 'Kuniyan House , panthalingal, Meppadam (P.O), Mampad\r\n676542', '8976654535', 'riyasmadofficial@gmail.com', 36, 'Hamsters', 'I wish adopt this pet', 1, '', '2025-07-08 04:35:51.000000', '', '2025-07-08 04:35:51.670795'),
-(38, 'fisher', 'no', '789456213', 'fisher@gmail.com', 11, 'Bengal', 'no', 1, '', '2025-07-22 16:02:35.000000', '', '2025-07-22 16:02:35.942140');
+(38, 'fisher', 'no', '789456213', 'fisher@gmail.com', 11, 'Bengal', 'no', 1, '', '2025-07-22 16:02:35.000000', '', '2025-07-22 16:02:35.942140'),
+(39, 'maze', 'nothing', '4578945121', 'maze123@gmail.com', 24, 'Leopard Gecko', 'nothing', 1, '', '2025-07-29 16:51:08.000000', '', '2025-07-29 16:51:08.224779');
 
 -- --------------------------------------------------------
 
@@ -135,7 +132,7 @@ CREATE TABLE IF NOT EXISTS `pets` (
   `p_updatedBy` varchar(200) NOT NULL,
   `p_updatedDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`p_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=43 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `pets`
@@ -181,7 +178,9 @@ INSERT INTO `pets` (`p_id`, `p_tittle`, `p_description`, `p_imagename`, `cat_id`
 (37, 'Finches ', 'Small, active birds known for their cheerful songs and colorful plumage. They are social and thrive in pairs or groups with plenty of space to fly.', 'uploads/1748953781_finches.webp', 3, '2025-01-12', 1, '', '2025-06-03 12:29:41', '', '2025-06-03 12:29:41'),
 (38, 'Indian Ringneck ', 'The Indian Ringneck Parakeet is a medium-sized, intelligent parrot known for its bright green feathers, playful nature, and ability to mimic human speech.\r\n', 'uploads/1748953843_indianringneck1.jpeg', 3, '2024-12-01', 1, '', '2025-06-03 12:30:43', '', '2025-06-03 12:30:43'),
 (39, 'nothing', 'ushs', 'uploads/1751561191_4.jpg', 3, '2025-08-20', 0, '', '2025-07-03 16:46:31', '', '2025-07-03 16:46:31'),
-(40, 'sample', 'nothing', 'uploads/1753200269_problem.jpg', 1, '2025-07-09', 0, '', '2025-07-22 16:04:29', '', '2025-07-22 16:04:29');
+(40, 'sample', 'nothing', 'uploads/1753200269_problem.jpg', 1, '2025-07-09', 0, '', '2025-07-22 16:04:29', '', '2025-07-22 16:04:29'),
+(41, 'sxx', 'wesd', 'uploads/1753808674_adoption.jpg', 4, '2025-07-01', 0, '', '2025-07-29 17:04:34', '', '2025-07-29 17:04:34'),
+(42, 'tge', 'r', 'uploads/1753809612_adoption.jpg', 6, '2025-07-01', 0, '', '2025-07-29 17:20:12', '', '2025-07-29 17:20:12');
 
 -- --------------------------------------------------------
 
@@ -207,131 +206,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `status`, `createdBy`, `createdDate`, `updatedBy`, `updatedDate`) VALUES
-(1, 'admin', '$2y$10$MrbyIztF9bTAdmzc2JA4NeZn8Le5Iw2hB.Q2xQCd0P9uh45wn27je', 1, '', '2025-05-23 17:29:59', '', '2025-05-23 17:29:59');
---
--- Database: `db_randomize`
---
-CREATE DATABASE IF NOT EXISTS `db_randomize` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
-USE `db_randomize`;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `guides`
---
-
-DROP TABLE IF EXISTS `guides`;
-CREATE TABLE IF NOT EXISTS `guides` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `department` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `email` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `phone` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `project_assignments`
---
-
-DROP TABLE IF EXISTS `project_assignments`;
-CREATE TABLE IF NOT EXISTS `project_assignments` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `student_id` int DEFAULT NULL,
-  `project_number` int DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `student_id` (`student_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `project_details`
---
-
-DROP TABLE IF EXISTS `project_details`;
-CREATE TABLE IF NOT EXISTS `project_details` (
-  `project_no` int NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `abstract` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  PRIMARY KEY (`project_no`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `students`
---
-
-DROP TABLE IF EXISTS `students`;
-CREATE TABLE IF NOT EXISTS `students` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `reg_no` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `year_of_admission` int DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `student_guide_assignments`
---
-
-DROP TABLE IF EXISTS `student_guide_assignments`;
-CREATE TABLE IF NOT EXISTS `student_guide_assignments` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `student_id` int NOT NULL,
-  `guide_id` int NOT NULL,
-  `assigned_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  KEY `student_id` (`student_id`),
-  KEY `guide_id` (`guide_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `users`
---
-
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE IF NOT EXISTS `users` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `username` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `email` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id`, `username`, `email`, `password`, `created_at`) VALUES
-(1, 'admin', 'admin@gmail.com', 'admin123\r\n\r\n', '2025-05-03 20:13:28'),
-(2, 'user1', 'user1@gmail.com', '$2y$10$EAClmMCd4xQ0uYjhi2c7R.cSM4c4BiBTHZ4QbOrVmSuivznBYUUja', '2025-05-08 04:57:32');
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `project_assignments`
---
-ALTER TABLE `project_assignments`
-  ADD CONSTRAINT `project_assignments_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`);
-
---
--- Constraints for table `student_guide_assignments`
---
-ALTER TABLE `student_guide_assignments`
-  ADD CONSTRAINT `student_guide_assignments_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`),
-  ADD CONSTRAINT `student_guide_assignments_ibfk_2` FOREIGN KEY (`guide_id`) REFERENCES `guides` (`id`);
+(1, 'farhan', '$2y$10$xMSZsEPWoNILr6SIlBveXeDjbvmINSljlTbI.25mlppp.YOF0KfR2', 1, '', '2025-05-23 17:29:59', '', '2025-05-23 17:29:59');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

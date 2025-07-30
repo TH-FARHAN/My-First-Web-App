@@ -8,7 +8,6 @@ $conn = new mysqli("localhost", "root", "", "adoptlove");
 if ($conn->connect_error) {
     die("Database connection failed: " . $conn->connect_error);
 }
-// Handle sorting
 $sort = $_GET['sort'] ?? 'first';
 switch ($sort) {
     case 'name':
@@ -26,7 +25,7 @@ switch ($sort) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>AdoptLove</title>
+  <title>AdoptLove | Download</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./js/dashboard/bootstrap.min.css">
@@ -142,9 +141,7 @@ switch ($sort) {
 </div>
 <script>
   window.onload = function () {
-    // Open print dialog
     window.print();
-    // Redirect to adoption.php after a short delay (whether printed or canceled)
     setTimeout(() => {
       window.location.replace("adoption.php");
     }, 100);

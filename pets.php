@@ -8,14 +8,12 @@ if (!isset($_SESSION['user_id'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Add this in <head> if not already included -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<!-- Then update the button -->
 <button onclick="scrollToTop()" id="scrollBtn" class="scroll-top-btn" title="Back to Top">
   <i class="fas fa-arrow-up"></i>
 </button>
   <link rel="stylesheet" href="styles.css">
-  <title>AdoptLove - Pets </title>
+  <title>AdoptLove | Pets </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./js/dashboard/bootstrap.min.css">
@@ -23,274 +21,267 @@ if (!isset($_SESSION['user_id'])) {
   <script src="./js/dashboard/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-  <style>
-   /* Overall page */
-body {
-  background-color: #f0f8ff; /* very light blue */
-  color: #004080; /* dark blue text */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-}
-.container-fluid {
-      padding-top: 30px;
-    }
-/* Header & page title */
-.well {
-  background: white;
-  border-radius: 15px;
-  padding: 15px 25px;
-  box-shadow: 0 8px 20px rgba(0, 123, 189, 0.12);
-  display: flex !important;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 25px;
-}
-.well h4 {
-  color: #007bbd;
-  font-weight: 700;
-  font-size: 1.8rem;
-  margin: 0;
-  letter-spacing: 1.2px;
-}
-/* Buttons */
-.btn-success {
-  background-color: #007bbd;
-  border: none;
-  padding: 12px 28px;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 50px;
-  box-shadow: 0 6px 15px rgba(0, 123, 189, 0.3);
-  transition: background-color 0.3s ease;
-  cursor: pointer;
-}
-.btn-success:hover, .btn-success:focus {
-  background-color: #004080;
-  box-shadow: 0 8px 25px rgba(0, 64, 128, 0.5);
-  outline: none;
-}
-/* Table styling */
-table.table {
-  background: white;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 123, 189, 0.12);
-  border-collapse: separate !important;
-  border-spacing: 0 10px;
-  width: 100%;
-}
-table.table thead tr {
-  background-color: #e6f2ff;
-  color: #004080;
-  font-weight: 700;
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-  text-align: left;
-  border-bottom: none !important;
-}
-table.table thead th {
-  padding: 14px 20px;
-  border: none !important;
-}
-table.table tbody tr {
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0, 123, 189, 0.07);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-table.table tbody tr:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 123, 189, 0.15);
-}
-table.table tbody td {
-  padding: 15px 20px;
-  vertical-align: middle;
-  color: #004080;
-  font-weight: 600;
-  border: none !important;
-}
-/* Table Image cells */
-table.table tbody td:nth-child(4) {
-  max-width: 100px;
-}
-table.table tbody td:nth-child(4) img {
-  max-width: 80px;
-  border-radius: 10px;
-  object-fit: cover;
-}
-/* Modal styles */
-.modal-content {
-  border-radius: 20px;
-  box-shadow: 0 14px 40px rgba(0, 123, 189, 0.2);
-  padding: 20px 25px;
-  background-color: white;
-  color: #004080;
-}
-.modal-header {
-  border-bottom: 2px solid #007bbd;
-  padding-bottom: 10px;
-}
-.modal-header h4 {
-  font-weight: 700;
-  color: #007bbd;
-}
-.modal-body .form-group label {
-  font-weight: 600;
-  color: #007bbd;
-}
-.modal-body .form-control {
-  border-radius: 12px;
-  border: 2px solid #007bbd;
-  padding: 10px 15px;
-  font-size: 1rem;
-  color: #004080;
-  transition: border-color 0.3s ease;
-}
-.modal-body .form-control:focus {
-  border-color: #004080;
-  box-shadow: 0 0 8px rgba(0, 64, 128, 0.3);
-  outline: none;
-}
-/* Modal footer buttons */
-.modal-footer {
-  border-top: 2px solid #007bbd;
-  padding-top: 15px;
-  display: flex;
-  justify-content: flex-end;
-  gap: 12px;
-}
-.modal-footer .btn-primary {
-  background-color: #007bbd;
-  border: none;
-  border-radius: 50px;
-  padding: 10px 28px;
-  font-weight: 700;
-  box-shadow: 0 6px 15px rgba(0, 123, 189, 0.3);
-  transition: background-color 0.3s ease;
-}
-.modal-footer .btn-primary:hover {
-  background-color: #004080;
-  box-shadow: 0 8px 25px rgba(0, 64, 128, 0.5);
-}
-.modal-footer .btn-secondary {
-  background-color: #e6f2ff;
-  color: #007bbd;
-  border-radius: 50px;
-  padding: 10px 28px;
-  font-weight: 600;
-  border: 2px solid #007bbd;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-.modal-footer .btn-secondary:hover {
-  background-color: #007bbd;
-  color: white;
-}
-select.form-control,
-input.form-control,
-textarea.form-control {
-  padding: 0.5rem 1rem;
-  font-size: 16px;
-  line-height: 1.5;
-  height: auto;
-  box-sizing: border-box;
-}
-/* Responsive tweaks */
-@media (max-width: 768px) {
+ <style>
   body {
-    padding: 15px 20px;
+    background-color: #ffffff; /* white */
+    color: #004d00; /* dark green text */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+  }
+  .container-fluid {
+    padding-top: 30px;
   }
   .well {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 10px;
+    background: white;
+    border-radius: 15px;
+    padding: 15px 25px;
+    box-shadow: 0 8px 20px rgba(0, 128, 0, 0.12);
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  .well h4 {
+    color: #008000;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin: 0;
+    letter-spacing: 1.2px;
   }
   .btn-success {
-    width: 100%;
-    padding: 14px;
+    background-color: #28a745;
+    border: none;
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    box-shadow: 0 6px 15px rgba(40, 167, 69, 0.3);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
   }
-  table.table thead th,
+  .btn-success:hover, .btn-success:focus {
+    background-color: #1c7430;
+    box-shadow: 0 8px 25px rgba(28, 116, 48, 0.5);
+    outline: none;
+  }
+  table.table {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 128, 0, 0.12);
+    border-collapse: separate !important;
+    border-spacing: 0 10px;
+    width: 100%;
+  }
+  table.table thead tr {
+    background-color: #f8f8f8;
+    color: #004d00;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-align: left;
+    border-bottom: none !important;
+  }
+  table.table thead th {
+    padding: 14px 20px;
+    border: none !important;
+  }
+  table.table tbody tr {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 128, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  table.table tbody tr:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 128, 0, 0.15);
+  }
   table.table tbody td {
-    padding: 12px 10px;
+    padding: 15px 20px;
+    vertical-align: middle;
+    color: #004d00;
+    font-weight: 600;
+    border: none !important;
+  }
+  table.table tbody td:nth-child(4) {
+    max-width: 100px;
   }
   table.table tbody td:nth-child(4) img {
-    max-width: 50px;
+    max-width: 80px;
+    border-radius: 10px;
+    object-fit: cover;
   }
-}
-.scroll-top-btn {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  padding: 10px 16px;
-  font-size: 16px;
-  font-weight: 500;
-  color: #ffffff;
-  background-color: #29b6f6;
-  border: none;
-  border-radius: 50px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-  display: none;
-  transition: all 0.3s ease-in-out;
-  z-index: 999;
-}
-.scroll-top-btn:hover {
-  background-color: #0288d1;
-  transform: translateY(-3px);
-}
-.scroll-top-btn:active {
-  transform: scale(0.95);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-  .search-form {
-      margin: 40px auto 30px auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  .modal-content {
+    border-radius: 20px;
+    box-shadow: 0 14px 40px rgba(0, 128, 0, 0.2);
+    padding: 20px 25px;
+    background-color: white;
+    color: #004d00;
+  }
+  .modal-header {
+    border-bottom: 2px solid #28a745;
+    padding-bottom: 10px;
+  }
+  .modal-header h4 {
+    font-weight: 700;
+    color: #28a745;
+  }
+  .modal-body .form-group label {
+    font-weight: 600;
+    color: #28a745;
+  }
+  .modal-body .form-control {
+    border-radius: 12px;
+    border: 2px solid #28a745;
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: #004d00;
+    transition: border-color 0.3s ease;
+  }
+  .modal-body .form-control:focus {
+    border-color: #1c7430;
+    box-shadow: 0 0 8px rgba(28, 116, 48, 0.3);
+    outline: none;
+  }
+  .modal-footer {
+    border-top: 2px solid #28a745;
+    padding-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+  .modal-footer .btn-primary {
+    background-color: #28a745;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 28px;
+    font-weight: 700;
+    box-shadow: 0 6px 15px rgba(40, 167, 69, 0.3);
+    transition: background-color 0.3s ease;
+  }
+  .modal-footer .btn-primary:hover {
+    background-color: #1c7430;
+    box-shadow: 0 8px 25px rgba(28, 116, 48, 0.5);
+  }
+  .modal-footer .btn-secondary {
+    background-color: #ffffff;
+    color: #28a745;
+    border-radius: 50px;
+    padding: 10px 28px;
+    font-weight: 600;
+    border: 2px solid #28a745;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .modal-footer .btn-secondary:hover {
+    background-color: #28a745;
+    color: white;
+  }
+  select.form-control,
+  input.form-control,
+  textarea.form-control {
+    padding: 0.5rem 1rem;
+    font-size: 16px;
+    line-height: 1.5;
+    height: auto;
+    box-sizing: border-box;
+  }
+  @media (max-width: 768px) {
+    body {
+      padding: 15px 20px;
+    }
+    .well {
+      flex-direction: column !important;
+      align-items: flex-start !important;
       gap: 10px;
-      flex-wrap: wrap;
     }
-    .search-input {
-      padding: 12px 20px;
+    .btn-success {
       width: 100%;
-      max-width: 400px;
-      border: 1px solid #ccc;
-      border-radius: 30px;
-      font-size: 16px;
-      background-color: #f9f9f9;
-      transition: all 0.3s ease-in-out;
-      box-shadow: 0 2px 8px rgba(0, 123, 255, 0.1);
+      padding: 14px;
     }
-    .search-input:focus {
-      outline: none;
-      border-color: #0dcaf0;
-      background-color: #fff;
-      box-shadow: 0 0 10px rgba(13, 202, 240, 0.3);
+    table.table thead th,
+    table.table tbody td {
+      padding: 12px 10px;
     }
+    table.table tbody td:nth-child(4) img {
+      max-width: 50px;
+    }
+  }
+  .scroll-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #43a047;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    display: none;
+    transition: all 0.3s ease-in-out;
+    z-index: 999;
+  }
+  .scroll-top-btn:hover {
+    background-color: #2e7d32;
+    transform: translateY(-3px);
+  }
+  .scroll-top-btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .search-form {
+    margin: 40px auto 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .search-input {
+    padding: 12px 20px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    font-size: 16px;
+    background-color: #ffffff;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 8px rgba(40, 167, 69, 0.1);
+  }
+  .search-input:focus {
+    outline: none;
+    border-color: #28a745;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.3);
+  }
+  .search-btn {
+    background-color: #28a745;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+    box-shadow: 0 2px 6px rgba(40, 167, 69, 0.4);
+  }
+  .search-btn:hover {
+    background-color: #1c7430;
+    transform: scale(1.05);
+  }
+  @media (max-width: 500px) {
+    .search-input {
+      width: 90%;
+    }
+
     .search-btn {
-      background-color: #0dcaf0;
-      color: #fff;
-      padding: 12px 25px;
-      border: none;
-      border-radius: 30px;
-      font-size: 16px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: background-color 0.3s ease-in-out, transform 0.2s ease;
-      box-shadow: 0 2px 6px rgba(13, 202, 240, 0.4);
+      width: 100%;
     }
-    .search-btn:hover {
-      background-color: #0bb5d4;
-      transform: scale(1.05);
-    }
-    @media (max-width: 500px) {
-      .search-input {
-        width: 90%;
-      }
-      .search-btn {
-        width: 100%;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
 <?php if (isset($_GET['msg'])): ?>
@@ -335,12 +326,11 @@ textarea.form-control {
         <h4 style="margin: 0;">Adopt Love</h4>
         <button class="btn btn-success" data-toggle="modal" data-target="#myModal" onclick="clearPetForm()">Add</button>
       </div>
-      <!-- 🌟 Light Blue Search Bar -->       
-       <div class="search-form">
-        <input type="text" id="searchInput" class="search-input" placeholder="🔍 Search by pet name or category...">
-        <button class="search-btn" type="button">Search</button>
-       </div>
-       <div class="row">
+  <div class="search-form">
+  <input type="text" id="searchInput" class="search-input" placeholder="🔍 Search by pet name or category...">
+  <button class="search-btn" type="button">Search</button>
+</div>
+     <div class="row">
         <div class="col-md-12">
           <div id="petTableContainer">
             <?php
@@ -401,9 +391,18 @@ textarea.form-control {
   </div>
 </div>
 <?php include 'pet_modal.php'; ?>
-<!-- 🔁 AJAX Search Logic -->
+<button onclick="scrollToTop()" id="scrollBtn" class="scroll-top-btn" title="Back to Top">↑</button>
 <script>
-  document.getElementById("searchInput").addEventListener("input", function () {
+function clearPetForm() {
+    document.getElementById('pet_id').value = 0;
+    document.getElementById('name').value = '';
+    document.getElementById('description').value = '';
+    document.getElementById('petImage').value = '';
+    document.getElementById('petType').selectedIndex = 0;
+    document.getElementById('dob').value = '';
+    document.getElementById('status').value = '1'; // default to active
+}
+document.getElementById("searchInput").addEventListener("input", function () {
     const query = this.value;
     const xhr = new XMLHttpRequest();
     xhr.open("GET", "pets.php?search=" + encodeURIComponent(query), true);
@@ -417,9 +416,7 @@ textarea.form-control {
     };
     xhr.send();
   });
-</script>
-<script>
-  function loadPetDetails(id) {
+   function loadPetDetails(id) {
     $.ajax({
       url: 'get_pet_details.php',
       type: 'POST',
@@ -442,30 +439,15 @@ textarea.form-control {
       }
     });
   }
-</script>
-<script>
-  flatpickr("#dob", { dateFormat: "Y-m-d" });
-</script>
-<button onclick="scrollToTop()" id="scrollBtn" class="scroll-top-btn" title="Back to Top">↑</button>
-<script>
-  window.onscroll = function () {
+    flatpickr("#dob", { dateFormat: "Y-m-d" });
+ window.onscroll = function () {
     let scrollBtn = document.getElementById("scrollBtn");
     scrollBtn.style.display = (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) ? "block" : "none";
   };
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
-</script>
-<script>
-function clearPetForm() {
-    document.getElementById('pet_id').value = 0;
-    document.getElementById('name').value = '';
-    document.getElementById('description').value = '';
-    document.getElementById('petImage').value = '';
-    document.getElementById('petType').selectedIndex = 0;
-    document.getElementById('dob').value = '';
-    document.getElementById('status').value = '1'; // default to active
-}
+
 </script>
 </body>
 </html>
